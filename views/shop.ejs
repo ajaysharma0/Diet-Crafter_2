@@ -1,0 +1,301 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/stylesShop.css" />
+    <script src="/static/scriptShop.js" async></script>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #container {
+        min-height: 100%;
+        position: relative;
+    }
+
+    .card {
+        width: 18rem;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    #body {
+        padding: 10px;
+        padding-bottom: 60px;
+        /* Height of the footer */
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+    }
+
+    button {
+        padding: 0;
+        border: none;
+        background: none;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="header">
+
+            <!-- Header start -->
+            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #254175;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRR4hm66ZVaEK_uLX27bGsSu1aPphvt_SsljaljmcDpjJ1CZKbE"
+                    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt=""
+                    width="60px">
+                <a class="navbar-brand" href="#" style="color: rgb(247, 191, 51);">&nbsp;DietCrafters</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-primary" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/chat">Chat</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Tools</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="/bmi">BMI calculator</a>
+                                <a class="dropdown-item" href="/diet">Diet planner</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user"></i>
+                                Hi <%= name %>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="/account">Account Details</a>
+                                <a class="dropdown-item" href="user.html">
+                                    <form action="/logout?_method=DELETE" method="POST">
+                                        <button type="submit">Log Out</button>
+                                    </form>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                </div>
+            </nav>
+            <!-- Header end -->
+        </div>
+        <div id="body"; style="margin-left: 86px;">
+            <!-- body start-->
+            <section class="container content-section">
+                <h2 class="section-header">Protein Suplements</h2>
+                <div class="shop-items">
+                    <div class="shop-item">
+                        <span class="shop-item-title">UN Whey Gold</span>
+                        <img class="shop-item-image"
+                            src="https://images-cdn.ubuy.co.in/65d632cbc6907a2e0d6b47c5-optimum-nutrition-gold-standard-100.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹3299.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="shop-item-title">Dymatize Elite 100%</span>
+                        <img class="shop-item-image"
+                            src="https://m.media-amazon.com/images/I/71pZ8ecCLoL.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹5199.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="shop-item-title">MP Combat 100%</span>
+                        <img class="shop-item-image"
+                            src="https://cdn.nutrabay.com/wp-content/uploads/2017/09/NB-MUP-1007-01-01.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹4399.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="shop-item-title">Nitrotech Gold 100%</span>
+                        <img class="shop-item-image"
+                            src="https://m.media-amazon.com/images/I/71Gwy9g8bHL.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹5399.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container content-section">
+                <h2 class="section-header">Vitamins</h2>
+                <div class="shop-items">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Multi Vitamin, 90N</span>
+                        <img class="shop-item-image"
+                            src="https://img10.hkrtcdn.com/31086/prd_3108509-MuscleBlaze-MBVITE-Daily-Multivitamin-for-Enhanced-Energy-Stamina-Gut-Health-90-tablets-Unflavoured_o.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹1299.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="shop-item-title">Joint Support 60N</span>
+                        <img class="shop-item-image"
+                            src="https://images-eu.ssl-images-amazon.com/images/I/61EwU5nBkaL._AC_UL210_SR210,210_.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹449.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container content-section">
+                <h2 class="section-header">Weighing Machine</h2>
+                <div class="shop-items">
+                    <div class="shop-item">
+                        <span class="shop-item-title">MCP 130kg Personal Weighing Scale </span>
+                        <img class="shop-item-image"
+                            src="https://m.media-amazon.com/images/I/71oWYMrUdNL.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹999.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="shop-item-title">Sansui Electronics</span>
+                        <img class="shop-item-image"
+                            src="https://sansuiglobal.com/cdn/shop/products/image33_700x700.jpg?v=1662966912">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹449.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container content-section">
+                <h2 class="section-header">Books</h2>
+                <div class="shop-items" ">
+                    <div class="shop-item">
+                        <span class="shop-item-title">EAT UP, CLEAN UP  </span>
+                        <img class="shop-item-image"
+                            src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQaRfvHo7RHwIAAzFTuNksxH9EkSKg1cF8aTv1u2pv0rWO6LwbBaJatcQn7d94tyamceURoA3i3bs_rcH1p-h7soiuyV2ZZMp20ZqqHMauvlivccaMqBviE&usqp=CAE">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹199.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="shop-item-title">	
+                            Downshiftology Healthy Meal Prep
+                            </span>
+                        <img class="shop-item-image"
+                            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSb6NcNoWtCQqdIl6bSU7GWoSpwAPbXXEwOufy7mcgxORYmaMWxwzOA0sV7lYPpg2WSUcNSwg5MQhsJYF3RW6919a8U-y2MPkJCDL9DL3T6&usqp=CAE">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹1999.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container content-section" style="position: absolute; top: 88px; left:920px; width: 700px;">
+                <h2 class="section-header">House of Keto</h2>
+                <div class="shop-items" style="display: flex; align-content: center; flex-direction: column;">
+                    <div class="shop-item">
+                        <span class="shop-item-title">Keto Kickoff: 7 Day Plan </span>
+                        <img class="shop-item-image"
+                            src="https://static.wixstatic.com/media/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg/v1/fill/w_872,h_872,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹1800.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                   
+                    <div class="shop-item">
+                        <span class="shop-item-title">	
+                            28 Days of Keto
+                            </span>
+                        <img class="shop-item-image"
+                            src="https://static.wixstatic.com/media/5305c5_08b2ed769c7f41b79c1e5b5955e570ac~mv2_d_5624_4392_s_4_2.jpg/v1/fill/w_872,h_872,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_08b2ed769c7f41b79c1e5b5955e570ac~mv2_d_5624_4392_s_4_2.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹2400.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <span class="shop-item-title">	
+                            Complete Keto Plan
+                            </span>
+                        <img class="shop-item-image"
+                            src="https://static.wixstatic.com/media/5305c5_504e862a128e442284fe8ca555dddb04~mv2_d_3744_5616_s_4_2.jpg/v1/fill/w_872,h_872,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_504e862a128e442284fe8ca555dddb04~mv2_d_3744_5616_s_4_2.jpg">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price">₹4360.00</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- cart -->
+            <section class="container content-section">
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">₹0</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </section>
+            <!-- body end -->
+        </div>
+        <div id="footer">
+            <!-- footer start-->
+            <footer class="page-footer font-small bg-warning">
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">#DietCrafters <a
+                        href="https://github.com/the-code-master" target="__blank"><i class="fab fa-github"></i>
+                        GitHub</a></div>
+                <!-- Copyright -->
+
+            </footer>
+            <!-- footer end -->
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </div>
+</body>
+
+</html>
