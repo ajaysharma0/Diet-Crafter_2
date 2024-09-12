@@ -1,6 +1,4 @@
-# miniProject
-This project is made as a mini project for 6th semester, BE CSE - (Chitkara University)
-Author: Mohd Khalid
+
 
 
 Packages used-
